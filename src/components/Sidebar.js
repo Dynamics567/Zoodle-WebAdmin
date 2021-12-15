@@ -20,8 +20,8 @@ const Sidebar = () => {
       title: "CRM",
     },
     {
-      to: "/notification",
-      title: "Notification",
+      to: "/notifications",
+      title: "Notifications",
     },
     {
       to: "/stats",

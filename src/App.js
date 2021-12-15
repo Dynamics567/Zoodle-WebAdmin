@@ -2,6 +2,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import Sidebar from 'components/Sidebar';
 import Dashboard from 'pages/Dashboard';
 import Orders from 'pages/Orders';
+import CRM from 'pages/CRM';
+import Notifications from 'pages/Notifications';
 import Settings from 'pages/Settings';
 import Tables from 'pages/Tables';
 import Maps from 'pages/Maps';
@@ -18,6 +20,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/orders" component={Orders} />
+          <Route exact path="/crm" component={CRM} />
+          <Route exact path="/notifications" component={Notifications} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/tables" component={Tables} />
           <Route exact path="/maps" component={Maps} />
