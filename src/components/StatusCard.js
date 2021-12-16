@@ -1,38 +1,19 @@
 import Card from "@material-tailwind/react/Card";
-import CardRow from "@material-tailwind/react/CardRow";
-import CardHeader from "@material-tailwind/react/CardHeader";
-import CardStatus from "@material-tailwind/react/CardStatus";
-import CardStatusFooter from "@material-tailwind/react/CardStatusFooter";
-import Icon from "@material-tailwind/react/Icon";
+import CardBody from "@material-tailwind/react/CardBody";
+import H4 from "@material-tailwind/react/Heading4";
+import H6 from "@material-tailwind/react/Heading6";
 
 export default function StatusCard({
-  color,
-  icon,
   title,
   amount,
-  percentage,
-  percentageColor,
-  percentageIcon,
-  date,
 }) {
   return (
-    <div className="px-4 mb-10">
+    <div className="px-4 mb-10 w-max xl:w-48 text-center">
       <Card>
-        <CardRow>
-          <CardHeader color={color} iconOnly className="mb-0">
-            <Icon name={icon} size="3xl" color="white" />
-          </CardHeader>
-
-          <CardStatus title={title} amount={amount} />
-        </CardRow>
-
-        <CardStatusFooter
-          amount={percentage}
-          color={percentageColor}
-          date={date}
-        >
-          <Icon color={percentageColor} name={percentageIcon} />
-        </CardStatusFooter>
+        <CardBody>
+          <H4>{title}</H4>
+          <H6 color='orange'>{amount}</H6>
+        </CardBody>
       </Card>
     </div>
   );

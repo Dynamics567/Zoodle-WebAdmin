@@ -568,6 +568,15 @@ video {
 .mr-6{
 	margin-right: 1.5rem;
 }
+.-ml-4{
+	margin-left: -1rem;
+}
+.-mt-5{
+	margin-top: -1.25rem;
+}
+.mt-2{
+	margin-top: 0.5rem;
+}
 .-mt-24{
 	margin-top: -6rem;
 }
@@ -592,29 +601,20 @@ video {
 .mb-10{
 	margin-bottom: 2.5rem;
 }
-.mt-2{
-	margin-top: 0.5rem;
-}
 .mb-4{
 	margin-bottom: 1rem;
 }
 .mb-0{
 	margin-bottom: 0px;
 }
-.mr-2{
-	margin-right: 0.5rem;
-}
-.-ml-4{
-	margin-left: -1rem;
+.mb-16{
+	margin-bottom: 4rem;
 }
 .mb-14{
 	margin-bottom: 3.5rem;
 }
 .-mt-28{
 	margin-top: -7rem;
-}
-.mb-16{
-	margin-bottom: 4rem;
 }
 .mt-14{
 	margin-top: 3.5rem;
@@ -640,17 +640,20 @@ video {
 .h-full{
 	height: 100%;
 }
-.h-screen{
-	height: 100vh;
-}
 .h-10{
 	height: 2.5rem;
 }
-.h-40{
-	height: 10rem;
+.h-7{
+	height: 1.75rem;
+}
+.h-screen{
+	height: 100vh;
 }
 .h-auto{
 	height: auto;
+}
+.h-40{
+	height: 10rem;
 }
 .h-\[600px\]{
 	height: 600px;
@@ -664,14 +667,17 @@ video {
 .w-12{
 	width: 3rem;
 }
+.w-10{
+	width: 2.5rem;
+}
+.w-7{
+	width: 1.75rem;
+}
 .w-48{
 	width: 12rem;
 }
 .w-64{
 	width: 16rem;
-}
-.w-10{
-	width: 2.5rem;
 }
 .w-56{
 	width: 14rem;
@@ -739,11 +745,11 @@ video {
 .rounded-xl{
 	border-radius: 0.75rem;
 }
-.rounded-lg{
-	border-radius: 0.5rem;
-}
 .rounded-full{
 	border-radius: 9999px;
+}
+.rounded-lg{
+	border-radius: 0.5rem;
 }
 .border-2{
 	border-width: 2px;
@@ -2525,11 +2531,11 @@ video {
 	.xl\:col-end-7{
 		grid-column-end: 7;
 	}
-	.xl\:grid-cols-5{
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-	}
 	.xl\:grid-cols-4{
 		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+	.xl\:grid-cols-5{
+		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 	.xl\:grid-cols-6{
 		grid-template-columns: repeat(6, minmax(0, 1fr));
