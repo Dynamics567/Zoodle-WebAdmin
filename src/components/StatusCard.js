@@ -8,7 +8,7 @@ export default function StatusCard({
   amount,
 }) {
   return (
-    <div className="px-1 mb-10 w-max xl:w-60 text-center">
+    <div className="px-1 mb-10 w-52 md-w-72 lg:w-56 xl:w-60 text-center">
       <Card>
         <CardBody>
           <H5>{title}</H5>
