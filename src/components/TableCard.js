@@ -99,9 +99,9 @@ const CardTable = (props) => {
               </tr>
             </thead>
             <tbody>
-              {tableData.data.map((row) => {
+              {tableData.data.map((row, i) => {
                 return (
-                  <tr key={row.orderId}>
+                  <tr key={i}>
                     {tableData.headers.map((header) => {
                       return (
                         <th
