@@ -29,9 +29,8 @@ const NotificationCard = () => {
               <Image src={Team2} rounded alt="..." />
             </div>
           </div>
-        {/* I need to set the negative margin top, its not working, i might have to upgrade the tailwind */}
-          <div className="w-7 h-7 rounded-full border-2 border-grey bg-grey-300 -mt-5 mx-auto items-center justify-center">
-            <p>+5</p>
+          <div className="w-8 h-8 rounded-full border-2 border-gray-400 bg-gray-400 opacity-80 text-white -mt-2 mx-auto items-center justify-center">
+            <p className="m-0.5">+5</p>
           </div>
         </div>
         <div className="mt-2">
