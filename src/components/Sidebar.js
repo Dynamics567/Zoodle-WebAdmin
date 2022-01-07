@@ -50,9 +50,9 @@ const Sidebar = () => {
             <hr className="my-4 min-w-full" />
 
             <ul className="flex-col min-w-full flex list-none">
-              {sidebarItems.map((item) => {
+              {sidebarItems.map((item, i) => {
                 return (
-                  <li className="rounded-r-lg mb-4 -ml-16 pl-8">
+                  <li className="rounded-r-lg mb-4 -ml-16 pl-8" key={i}>
                     <NavLink
                       key={item.title}
                       to={item.to}
