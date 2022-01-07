@@ -535,6 +535,12 @@ video {
 .bottom-0{
 	bottom: 0px;
 }
+.left-full{
+	left: 100%;
+}
+.-left-full{
+	left: -100%;
+}
 .z-50{
 	z-index: 50;
 }
@@ -727,6 +733,15 @@ video {
 .w-56{
 	width: 14rem;
 }
+.w-60{
+	width: 15rem;
+}
+.w-72{
+	width: 18rem;
+}
+.w-52{
+	width: 13rem;
+}
 .min-w-full{
 	min-width: 100%;
 }
@@ -774,6 +789,9 @@ video {
 }
 .gap-4{
 	gap: 1rem;
+}
+.gap-y-2{
+	row-gap: 0.5rem;
 }
 .overflow-hidden{
 	overflow: hidden;
@@ -2624,6 +2642,15 @@ video {
 	}
 	.lg\:w-4\/12{
 		width: 33.333333%;
+	}
+	.lg\:w-64{
+		width: 16rem;
+	}
+	.lg\:w-60{
+		width: 15rem;
+	}
+	.lg\:w-56{
+		width: 14rem;
 	}
 	.lg\:grid-cols-2{
 		grid-template-columns: repeat(2, minmax(0, 1fr));

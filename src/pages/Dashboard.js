@@ -5,9 +5,7 @@ import ChartDoughnut from 'components/ChartDoughnut';
 export default function Dashboard() {
   return (
     <>
-      <div className="bg-light-blue-500 px-3 md:px-8 h-24" />
-      
-      <div className="px-3 md:px-8 -mt-24">
+      <div className="bg-white pt-14 pb-28 px-3 md:px-8 h-auto">
         <div className="container mx-auto max-w-full">
           <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-4">
             <StatusCard
