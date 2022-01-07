@@ -1,4 +1,3 @@
-import StatusCard from "components/StatusCard";
 import NotificationCard from "components/NotificationCard";
 
 const Notifications = () => {
