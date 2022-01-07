@@ -112,11 +112,13 @@ export default function ChartLine() {
 
   return (
     <Card>
-      <CardHeader color="orange" contentPosition="left">
-        <h6 className="uppercase text-gray-200 text-xs font-medium">
-          Overview
-        </h6>
-        <h2 className="text-white text-2xl">Sales value</h2>
+      <CardHeader color="white" contentPosition="left">
+        <div className="grid grid-cols-2 text-black pt-10 w-full">
+          <h2 className="col-start-1 col-end-2 text-2xl">Business Overview</h2>
+          <select className="col-start-2 col-end-3">
+            <option id="weekly" selected>Weekly</option>
+          </select>
+        </div>
       </CardHeader>
       <CardBody>
         <div className="relative h-96">
