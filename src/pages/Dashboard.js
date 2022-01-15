@@ -14,7 +14,7 @@ export default function Dashboard() {
             />
             <StatusCard
               title="Income"
-              amount="2,356"
+              amount="$2,356"
             />
             <StatusCard
               title="Active Trades"

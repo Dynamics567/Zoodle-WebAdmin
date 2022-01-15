@@ -7,7 +7,6 @@ import Notifications from 'pages/Notifications';
 import Stats from 'pages/Stats';
 import UserControl from 'pages/UserControl';
 import Settings from 'pages/Settings';
-import Tables from 'pages/Tables';
 import Maps from 'pages/Maps';
 import Footer from 'components/Footer';
 
@@ -27,7 +26,6 @@ function App() {
           <Route exact path="/stats" component={Stats} />
           <Route exact path="/user-control" component={UserControl} />
           <Route exact path="/settings" component={Settings} />
-          <Route exact path="/tables" component={Tables} />
           <Route exact path="/maps" component={Maps} />
           <Redirect from="*" to="/" />
         </Switch>

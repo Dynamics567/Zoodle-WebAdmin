@@ -116,7 +116,7 @@ export default function ChartLine() {
         <div className="grid grid-cols-2 text-black pt-10 w-full">
           <h2 className="col-start-1 col-end-2 text-2xl">Business Overview</h2>
           <select className="col-start-2 col-end-3">
-            <option id="weekly" selected>Weekly</option>
+            <option id="weekly" defaultValue>Weekly</option>
           </select>
         </div>
       </CardHeader>

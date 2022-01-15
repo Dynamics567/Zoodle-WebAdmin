@@ -1,4 +1,4 @@
-import TableCard from "components/TableCard";
+import TableCard from "components/TableCard/UserControlTabeCard";
 
 // Update the dat to fit in
 // Add tabs from gidigamer

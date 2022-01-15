@@ -1,5 +1,5 @@
 import StatusCard from "components/StatusCard";
-import TableCard from "components/TableCard";
+import TableCard from "components/TableCard/CRMTableCard";
 
 const CRM = () => {
   const tableData = {
