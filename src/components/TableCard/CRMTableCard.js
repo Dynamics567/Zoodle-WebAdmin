@@ -4,81 +4,9 @@ import CardBody from "@material-tailwind/react/CardBody";
 
 const CardTable = (props) => {
   let { title, tableData } = props;
-  if (!title) {
-    title = "Orders";
-  }
-  if (!tableData) {
-    tableData = {
-      headers: [
-        "Order ID",
-        "Buyer",
-        "Seller",
-        "Buyer Email",
-        "Seller Email",
-        "Date",
-        "Status",
-      ],
-      data: [
-        {
-          "Order ID": "#89072",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "17-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89073",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Completed",
-        },
-        {
-          "Order ID": "#89074",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89075",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Completed",
-        },
-        {
-          "Order ID": "#89076",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "15-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89077",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "14-08-2021",
-          Status: "Completed",
-        },
-      ],
-    };
-  }
   return (
     <Card>
-      <CardHeader color="whute" contentPosition="left">
+      <CardHeader color="white" contentPosition="left">
         <h2 className="text-black text-2xl mt-10">{title}</h2>
       </CardHeader>
       <CardBody>
@@ -101,15 +29,26 @@ const CardTable = (props) => {
             <tbody>
               {tableData.data.map((row, i) => {
                 return (
-                  <tr key={i}>
+                  <tr key={i} className="py-5">
                     {tableData.headers.map((header) => {
+                      let statusStyling = "";
+                      if (header === "Status" && row[header] === "Pending") {
+                        statusStyling = "text-red-500";
+                      } else if (
+                        header === "Status" &&
+                        row[header] === "Responded"
+                      ) {
+                        statusStyling = "text-green-500";
+                      }
+                      let dataStyling = `align-middle font-medium text-sm whitespace-nowrap px-2 py-4 text-left ${statusStyling}`;
+                      if (header === "") {
+                        console.log("yess");
+                        dataStyling = `align-middle font-medium text-sm text-white text-center whitespace-nowrap px-2 py-4 bg-orange-500 rounded-lg mx-auto my-3 py-5`;
+                      }
                       return (
-                        <th
-                          key={header}
-                          className="align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left"
-                        >
-                          {row[header]}
-                        </th>
+                        <td key={header}>
+                          <div className={`m-auto ${dataStyling}`}>{row[header]}</div>
+                        </td>
                       );
                     })}
                   </tr>

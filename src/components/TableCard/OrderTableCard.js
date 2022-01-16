@@ -31,11 +31,14 @@ const CardTable = (props) => {
                 return (
                   <tr key={i}>
                     {tableData.headers.map((header) => {
-                      let statusStyling = '';
-                      if(header === 'Status' && row[header] === 'Pending'){
-                        statusStyling = 'text-red-500';
-                      }else if(header === 'Status' && row[header] === 'Completed'){
-                        statusStyling = 'text-green-500';
+                      let statusStyling = "";
+                      if (header === "Status" && row[header] === "Pending") {
+                        statusStyling = "text-red-500";
+                      } else if (
+                        header === "Status" &&
+                        row[header] === "Completed"
+                      ) {
+                        statusStyling = "text-green-500";
                       }
                       return (
                         <td
