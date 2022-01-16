@@ -1,17 +1,17 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Sidebar from 'components/Sidebar';
-import Dashboard from 'pages/Dashboard';
-import Orders from 'pages/Orders';
-import CRM from 'pages/CRM';
-import Notifications from 'pages/Notifications';
-import Stats from 'pages/Stats';
-import UserControl from 'pages/UserControl';
-import Settings from 'pages/Settings';
-import Maps from 'pages/Maps';
-import Footer from 'components/Footer';
+import { Switch, Route, Redirect } from "react-router-dom";
+import Sidebar from "components/Sidebar";
+import Dashboard from "pages/Dashboard";
+import Orders from "pages/Orders";
+import CRM from "pages/CRM";
+import Notifications from "pages/Notifications";
+import Stats from "pages/Stats";
+import UserControl from "pages/UserControl";
+import Settings from "pages/Settings";
+import Maps from "pages/Maps";
 
 // Tailwind CSS Style Sheet
-import 'assets/styles/tailwind.css';
+import "assets/styles/tailwind.css";
+import "assets/styles/tabs.css";
 
 function App() {
   return (
@@ -29,7 +29,6 @@ function App() {
           <Route exact path="/maps" component={Maps} />
           <Redirect from="*" to="/" />
         </Switch>
-        <Footer />
       </div>
     </>
   );

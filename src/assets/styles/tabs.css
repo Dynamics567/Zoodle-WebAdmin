@@ -1,0 +1,42 @@
+.tabs-menu {
+    display: flex;
+    flex-direction: column;
+}
+.tabs-menu__tabs {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 1rem 0;
+    color: #787978;
+}
+.tabs-menu__tabs .tab {
+    cursor: pointer;
+    padding: 0 0.5em;
+}
+.tabs-menu__tabs .tab:not(.active):after {
+    content: "";
+    background: #FAA82D;
+    border-radius: 3px;
+    height: 0.2rem;
+    position: relative;
+    display: block;
+    transition: 0.2s;
+    opacity: 0;
+    top: 0.5rem;
+}
+.tabs-menu__tabs .tab:not(.active):hover:after, .tabs-menu__tabs .tab:not(.active):active:after {
+    opacity: 1;
+    top: 0;
+}
+.tabs-menu__tabs .active {
+    color: #000;
+}
+.tabs-menu__tabs .active:after {
+    content: "";
+    background: #FAA82D;
+    border-radius: 3px;
+    height: 0.2rem;
+    position: relative;
+    display: block;
+    transition: 0.2s;
+}

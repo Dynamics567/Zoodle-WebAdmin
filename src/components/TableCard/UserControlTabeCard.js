@@ -4,78 +4,6 @@ import CardBody from "@material-tailwind/react/CardBody";
 
 const CardTable = (props) => {
   let { title, tableData } = props;
-  if (!title) {
-    title = "Orders";
-  }
-  if (!tableData) {
-    tableData = {
-      headers: [
-        "Order ID",
-        "Buyer",
-        "Seller",
-        "Buyer Email",
-        "Seller Email",
-        "Date",
-        "Status",
-      ],
-      data: [
-        {
-          "Order ID": "#89072",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "17-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89073",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Completed",
-        },
-        {
-          "Order ID": "#89074",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89075",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "16-08-2021",
-          Status: "Completed",
-        },
-        {
-          "Order ID": "#89076",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "15-08-2021",
-          Status: "Pending",
-        },
-        {
-          "Order ID": "#89077",
-          Buyer: "Steve",
-          Seller: "@dogz_arena",
-          "Buyer Email": "johndoe@gmail.com",
-          "Seller Email": "johndoe@gmail.com",
-          Date: "14-08-2021",
-          Status: "Completed",
-        },
-      ],
-    };
-  }
   return (
     <Card>
       <CardHeader color="whute" contentPosition="left">
@@ -103,13 +31,49 @@ const CardTable = (props) => {
                 return (
                   <tr key={i}>
                     {tableData.headers.map((header) => {
+                      let statusStyling = "";
+                      if (
+                        header === "Status" &&
+                        (row[header] === "Suspended" ||
+                          row[header] === "Blocked")
+                      ) {
+                        statusStyling = "text-red-500";
+                      } else if (
+                        header === "Status" &&
+                        row[header] === "Active"
+                      ) {
+                        statusStyling = "text-green-500";
+                      }
+                      let dataStyling = `align-middle font-medium text-sm whitespace-nowrap px-2 py-4 text-left ${statusStyling}`;
+                      if (header === "") {
+                        dataStyling = `${row.Status === "Blocked"? "bg-gray-400 opacity-70 text-white": "bg-white text-orange-500 border border-orange-500"} align-middle font-light text-sm text-center whitespace-nowrap px-3 py-3 rounded-xl mx-1 my-3 pointer`;
+                      }
                       return (
-                        <th
-                          key={header}
-                          className="align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left"
-                        >
-                          {row[header]}
-                        </th>
+                        <td key={header}>
+                          <div
+                            className={`${
+                              header === "" ? "grid grid-cols-2" : dataStyling
+                            }`}
+                          >
+                            {header !== "" ? (
+                              row[header]
+                            ) : (
+                              <>
+                                <button className={`${dataStyling}`}>
+                                  {" "}
+                                  Block User{" "}
+                                </button>
+                                <button className={`${dataStyling}`}>
+                                  {" "}
+                                  {row.Status === "Suspended"
+                                    ? "Unsuspend"
+                                    : "Suspend"}{" "}
+                                  User{" "}
+                                </button>
+                              </>
+                            )}
+                          </div>
+                        </td>
                       );
                     })}
                   </tr>

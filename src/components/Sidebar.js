@@ -101,7 +101,9 @@ const Sidebar = () => {
                       {location.pathname.substring(1).toLowerCase() ===
                         item.title.toLowerCase() ||
                       (location.pathname.substring(1) === "" &&
-                        item.title === "Dashboard") ? (
+                        item.title === "Dashboard") ||
+                      (location.pathname.substring(1) === "user-control" &&
+                        item.title === "User Control") ? (
                         <item.icon.active />
                       ) : (
                         <item.icon.regular />

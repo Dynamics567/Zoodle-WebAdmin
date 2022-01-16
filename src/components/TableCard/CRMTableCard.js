@@ -42,7 +42,6 @@ const CardTable = (props) => {
                       }
                       let dataStyling = `align-middle font-medium text-sm whitespace-nowrap px-2 py-4 text-left ${statusStyling}`;
                       if (header === "") {
-                        console.log("yess");
                         dataStyling = `align-middle font-medium text-sm text-white text-center whitespace-nowrap px-2 py-4 bg-orange-500 rounded-lg mx-auto my-3 py-5`;
                       }
                       return (
