@@ -78,8 +78,8 @@ const CardTable = (props) => {
   }
   return (
     <Card>
-      <CardHeader color="purple" contentPosition="left">
-        <h2 className="text-white text-2xl">{title}</h2>
+      <CardHeader color="whute" contentPosition="left">
+        <h2 className="text-black text-2xl mt-10">{title}</h2>
       </CardHeader>
       <CardBody>
         <div className="overflow-x-auto">
@@ -90,7 +90,7 @@ const CardTable = (props) => {
                   return (
                     <th
                       key={header}
-                      className="px-2 text-purple-500 align-middle border-b border-solid border-gray-200 py-3 text-sm whitespace-nowrap font-light text-left"
+                      className="px-2 align-middle border-b-2 border-solid border-gray-500 py-3 text-sm whitespace-nowrap font-bold text-left"
                     >
                       {header}
                     </th>
@@ -99,14 +99,14 @@ const CardTable = (props) => {
               </tr>
             </thead>
             <tbody>
-              {tableData.data.map((row) => {
+              {tableData.data.map((row, i) => {
                 return (
-                  <tr key={row.orderId}>
+                  <tr key={i}>
                     {tableData.headers.map((header) => {
                       return (
                         <th
                           key={header}
-                          className="border-b border-gray-200 align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left"
+                          className="align-middle font-light text-sm whitespace-nowrap px-2 py-4 text-left"
                         >
                           {row[header]}
                         </th>
